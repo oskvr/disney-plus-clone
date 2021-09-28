@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from "@chakra-ui/button";
+import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import {
   Box,
@@ -19,26 +19,8 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import type { NextPage } from "next";
-import Head from "next/head";
 import { useEffect, useState } from "react";
-
-const DisneyButton = (props: ButtonProps) => {
-  return (
-    <Button
-      bg="#0063e5"
-      _hover={{ bg: "#0483ee" }}
-      _active={{ transform: "scale(0.95)" }}
-      textTransform="uppercase"
-      fontWeight="normal"
-      fontSize="15px"
-      rounded="sm"
-      px="14"
-      {...props}
-    >
-      {props.children}
-    </Button>
-  );
-};
+import DisneyButton from "../components/DisneyButton";
 
 const StarLogo = () => {
   return (
@@ -93,7 +75,6 @@ const Navbar = (props: BoxProps) => {
       <Spacer />
       <DisneyButton
         size="sm"
-        color="white"
         px="4"
         py="0"
         transition="0.5s"
